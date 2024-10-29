@@ -9,6 +9,10 @@ class Book extends Media {
     this.rating = rating;
   }
 
+  static calculateAverageRating(books) {
+    return books.reduce((sum, movie) => sum + movie.rating, 0) / books.length;
+  }
+
   static highestRating(arr) {
     let highestRate = 0;
     let highestBook;

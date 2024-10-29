@@ -20,6 +20,10 @@ class Movie extends Media {
     );
   }
 
+  static calculateAverageRating(movies) {
+    return movies.reduce((sum, movie) => sum + movie.rating, 0) / movies.length;
+  }
+
   summary() {
     return `Title: ${this.title}, Director: ${this.director}, Year: ${this.year}, Genre: ${this.genre}, Rating: ${this.rating}`;
   }
